@@ -264,7 +264,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">138</span> / Reading time: <span class="post-count">1 min</span></span>
+                        <span>Word count: <span class="post-count">413</span> / Reading time: <span class="post-count">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -393,15 +393,31 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p>简单的知识普及，Github Pages是依托于 Github 本身的技术服务经验开发出来的，官方网站上的介绍是Websites for you and your projects，包括create a blog功能在内.<br><a href="https://pages.github.com" target="_blank" rel="noopener">Github Pages官网地址</a><br> Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br><a href="https://hexo.io" target="_blank" rel="noopener">Hexo官网地址</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo中文文档地址</a> </p>
-<h3 id="Node，git安装"><a href="#Node，git安装" class="headerlink" title="Node，git安装"></a>Node，git安装</h3><ul>
+<h3 id="Node，git安装（环境）"><a href="#Node，git安装（环境）" class="headerlink" title="Node，git安装（环境）"></a>Node，git安装（环境）</h3><ul>
 <li><a href="http://nodejs.cn" target="_blank" rel="noopener">Node.js</a></li>
 <li><a href="https://git-scm.com/download" target="_blank" rel="noopener">Git</a></li>
 </ul>
-<p>如下即安装成功。</p>
+<p>一般使用检测版本来看是否安装成功。</p>
 <blockquote>
 <p><img src="/img/nodescreenshot.png" alt="截图"></p>
 </blockquote>
-<p>（未完待续。。。）</p>
+<h3 id="Hexo安装（先在本地搭建好静态博客）"><a href="#Hexo安装（先在本地搭建好静态博客）" class="headerlink" title="Hexo安装（先在本地搭建好静态博客）"></a>Hexo安装（先在本地搭建好静态博客）</h3><p>Hexo常用命令</p>
+<blockquote>
+<p>sudo npm install -g hexo-cli  //使用以下命令来安装（不加sudo会报错）<br>hexo init blog  //初始化工程目录<br>cd blog  //切换到当前目录<br>npm install  //安装依赖包<br>hexo server  //本地预览，<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+</blockquote>
+<p>默认使用landscape主题，在Hexo主题页中可以找到很多其他主题来替换，个人选择了archer，该主题方便二次开发。</p>
+<h3 id="建立Github托管仓库"><a href="#建立Github托管仓库" class="headerlink" title="建立Github托管仓库"></a>建立Github托管仓库</h3><p>创建好的仓库可以通过name.github.io在线访问,具体步骤：</p>
+<ul>
+<li>新建一个仓库，命名规则有要求：name.github.io(name和账号名相同)</li>
+<li>先生成SSH密钥，然后添加到Github上（设置中找SSH和GPG KEYS选项）</li>
+</ul>
+<h3 id="将Hexo和Github仓库关联"><a href="#将Hexo和Github仓库关联" class="headerlink" title="将Hexo和Github仓库关联"></a>将Hexo和Github仓库关联</h3><p>在_config.yml文件中修改，格式要求比较严格，type: repository: branch: 前面两个空格，冒号后面一个空格</p>
+<blockquote>
+<p><img src="/img/deploy.png" alt="截图"></p>
+</blockquote>
+<blockquote>
+<p>npm install hexo-deployer-git –save //安装依赖包<br>hexo genearte //生成静态页面至public目录<br>hexo server //在本地预览，<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>hexo deploy //部署到GitHub</p>
+</blockquote>
 
     </article>
     <!-- license  -->
@@ -532,7 +548,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node，git安装"><span class="toc-number">1.</span> <span class="toc-text">Node，git安装</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node，git安装（环境）"><span class="toc-number">1.</span> <span class="toc-text">Node，git安装（环境）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo安装（先在本地搭建好静态博客）"><span class="toc-number">2.</span> <span class="toc-text">Hexo安装（先在本地搭建好静态博客）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建立Github托管仓库"><span class="toc-number">3.</span> <span class="toc-text">建立Github托管仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将Hexo和Github仓库关联"><span class="toc-number">4.</span> <span class="toc-text">将Hexo和Github仓库关联</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -570,14 +586,7 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 4 </div>
+    <div class="total-archive"> Total : 3 </div>
     
     <div class="post-archive">
     
@@ -586,11 +595,6 @@ top:50vh;
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/28</span><a class="archive-post-title" href= "/2018/05/28/Hexo主题制作/" >Hexo主题制作</a>
-        </li>
     
     
         <li class="archive-post-item">
